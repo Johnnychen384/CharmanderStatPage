@@ -1,0 +1,120 @@
+
+/* Background Image */
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/bg.jpg");
+    background-attachment: fixed;
+    margin: 0px;
+    width: 100%;
+    max-width: 1250px;
+}
+
+
+/* NavBar */
+
+.NavBar {
+    position: relative;
+    left: 250px;
+    margin: 0px;
+    max-width: 1200px;
+    width: 100%;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.NavBar ul{
+    list-style-type: none;
+}
+
+.NavBar ul li {
+    display: inline;
+    position: relative;
+    margin: 0px;
+    /* padding: 20px 30px 20px 30px; */
+    align-content: center;
+}
+
+.NavBar ul li a {
+    text-decoration: none;
+    color: dimgray;
+    font-size: 22px;
+    font-weight: 20px;
+    padding: 20px 30px 20px 30px;
+    transition: shadow 1000ms;
+}
+
+/* Sublist */
+#NavBarSubs {
+    position: absolute;
+    display: none;
+    width: 125px;
+    margin: 0px;
+    padding: 0px;
+    left: 550px;
+    top: 40px;
+    /* display: block; */
+}
+
+
+.NavBarSub a {
+    display: block;
+    position: relative;
+    margin: 0px;
+    top: 34px;
+    padding: 15px 5px 15px 5px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    color: dimgray;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 20px;
+    transition: shadow 1000ms;
+    z-index: 2;
+}
+
+/* hover functions for lists */
+.NavBar ul li a:hover {
+    color: white;
+    /* text-shadow: 2px 1px 5px black; */
+    box-shadow: 1px 1px 15px black;
+}
+
+.NavBarSub a:hover {
+    color: white;
+    box-shadow: 1px 1px 15px black;
+}
+
+/* .Hero {
+    background-color: white;
+} */
+
+
+.b29{
+    width: 28%;
+    padding: 5px 0px 5px 10px;
+}
+
+
+
+/* Footer */
+.FooterFlex {
+    display: flex;
+}
+
+.FooterContainer {
+    position: relative;
+    left: 450px;
+}
+
+.FooterContainer a {
+    color: black;
+    font-size: 15px;
+}
+
+.copyright {
+    display: inline;
+}

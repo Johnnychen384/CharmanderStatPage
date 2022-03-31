@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Charmander</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
+        <style>
+            h2 {
+                text-align: center;
+            }
+            
+            /* heroBox */
+            .pokemon {
+                padding-top: 40px;
+                padding-bottom: 25px;
+            }
+
+
+            .Box {
+                position: relative;
+                background-color: white;
+                margin: 0px 115px;
+                left: 120px;
+                width: 1000px;
+                max-width: 1000px;
+                
+            }
+
+
+            .Hero {
+                display: flex;
+                padding: 0px 25px;
+                z-index: 1;
+            }
+
+
+
+
+        
+            /* StatsHP */
+            .statContainer {
+                padding-left: 5px;
+                margin-bottom: 20px;
+            }
+
+
+        
+            h4 {
+                display: inline;
+            }
+            
+            .statsContainerHP {
+                display: flex;
+            }
+
+            .hpcontainer {
+                display: flex;
+                justify-content: space-between;
+                width: 80px;
+                height: 25px;
+                right: 400px;
+                margin: 0px 3px 0px 0px;
+                background-color: rgb(247, 129, 129);
+                border: 1px solid black;
+            }
+
+            .hpName {
+                margin: 0px;
+                align-self: center;
+            }
+
+            .hpNumber {
+                margin: 0px;
+                padding-right: 5px;
+                align-self: center;
+            }
+
+            .hpcontainer2 {
+                display: flex;
+                background-color:  rgb(247, 129, 129);
+                width: 90%;
+                height: 25px;
+                margin: 0px;
+                border: 1px solid black;
+            }
+
+            .hpBar {
+                background-color: red;
+                width: 0%;
+                animation-name: BarFillerHP;
+                animation-duration: 2500ms;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+                animation-delay: 3000ms;
+            }
+
+            @keyframes BarFillerHP {
+                from {width: 0%;}
+                10% {width: 4%;}
+                20% {width: 7%;}
+                30% {width: 10%;}
+                40% {width: 14%;}
+                50% {width: 18%;}
+                60% {width: 20%;}
+                70% {width: 25%;}
+                80% {width: 30%;}
+                90% {width: 35%;}
+                to {width: 39%;}
+            }
+
+
+            /* statsAtt */
+            .statsContainerATT {
+                display: flex;
+            }
+
+            .ATTcontainer {
+                display: flex;
+                justify-content: space-between;
+                width: 80px;
+                height: 25px;
+                right: 400px;
+                margin: 0px 3px 0px 0px;
+                background-color: rgb(250, 199, 103);
+                border: 1px solid black;
+            }
+
+            .ATTName {
+                margin: 0px;
+                align-self: center;
+            }
+
+            .ATTNumber {
+                margin: 0px;
+                padding-right: 5px;
+                align-self: center;
+            }
+
+            .ATTcontainer2 {
+                display: flex;
+                background-color:  rgb(250, 199, 103);
+                width: 90%;
+                height: 25px;
+                margin: 0px;
+                border: 1px solid black;
+            }
+
+            .ATTBar {
+                background-color: orange;
+                width: 0%;
+                animation-name: BarFillerATT;
+                animation-duration: 2500ms;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+                animation-delay: 3000ms;
+            }
+
+            @keyframes BarFillerATT {
+                from {width: 0%;}
+                10% {width: 5%;}
+                20% {width: 10%;}
+                30% {width: 15%;}
+                40% {width: 20%;}
+                50% {width: 25%;}
+                60% {width: 30%;}
+                70% {width: 35%;}
+                80% {width: 40%;}
+                90% {width: 45%;}
+                to {width: 52%;}
+            }
+
+
+
+            /* statsDef */
+            .statsContainerDef{
+                display: flex;
+            }
+
+            .Defcontainer {
+                display: flex;
+                justify-content: space-between;
+                width: 80px;
+                height: 25px;
+                right: 400px;
+                margin: 0px 3px 0px 0px;
+                background-color: rgb(243, 243, 160);
+                border: 1px solid black;
+            }
+
+            .DefName {
+                margin: 0px;
+                align-self: center;
+            }
+
+            .DefNumber {
+                margin: 0px;
+                padding-right: 5px;
+                align-self: center;
+            }
+
+            .Defcontainer2 {
+                display: flex;
+                background-color:  rgb(243, 243, 160);
+                width: 90%;
+                height: 25px;
+                margin: 0px;
+                border: 1px solid black;
+            }
+
+            .DefBar {
+                background-color: yellow;
+                width: 0%;
+                animation-name: BarFillerDef;
+                animation-duration: 2500ms;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+                animation-delay: 3000ms;
+            }
+
+            @keyframes BarFillerDef {
+                from {width: 0%;}
+                10% {width: 5%;}
+                20% {width: 10%;}
+                30% {width: 15%;}
+                40% {width: 20%;}
+                50% {width: 25%;}
+                60% {width: 30%;}
+                70% {width: 35%;}
+                80% {width: 38%;}
+                90% {width: 40%;}
+                to {width: 43%;}
+            }
+
+
+
+            /* stats Sp.Att */
+            .statsContainerSatt{
+                display: flex;
+            }
+
+            .Sattcontainer {
+                display: flex;
+                justify-content: space-between;
+                width: 80px;
+                height: 25px;
+                right: 400px;
+                margin: 0px 3px 0px 0px;
+                background-color: rgb(110, 110, 255);
+                border: 1px solid black;
+            }
+
+            .SattName {
+                margin: 0px;
+                align-self: center;
+            }
+
+            .SattNumber {
+                margin: 0px;
+                padding-right: 5px;
+                align-self: center;
+            }
+
+            .Sattcontainer2 {
+                display: flex;
+                background-color:  rgb(110, 110, 255);
+                width: 90%;
+                height: 25px;
+                margin: 0px;
+                border: 1px solid black;
+            }
+
+            .SattBar {
+                background-color: blue;
+                width: 0%;
+                animation-name: BarFillerSatt;
+                animation-duration: 2500ms;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+                animation-delay: 3000ms;
+            }
+
+            @keyframes BarFillerSatt {
+                from {width: 0%;}
+                5% {width: 5%;}
+                10% {width: 10%;}
+                20% {width: 15%;}
+                30% {width: 20%;}
+                40% {width: 25%;}
+                50% {width: 30%;}
+                60% {width: 35%;}
+                70% {width: 40%;}
+                80% {width: 45%;}
+                90% {width: 50%;}
+                95% {width: 55%;}
+                to {width: 60%;}
+            }
+
+
+            /* stats Sp.Def */
+            .statsContainerSdef{
+                display: flex;
+            }
+
+            .Sdefcontainer {
+                display: flex;
+                justify-content: space-between;
+                width: 80px;
+                height: 25px;
+                right: 400px;
+                margin: 0px 3px 0px 0px;
+                background-color: rgb(119, 255, 119);
+                border: 1px solid black;
+            }
+
+            .SdefName {
+                margin: 0px;
+                align-self: center;
+            }
+
+            .SdefNumber {
+                margin: 0px;
+                padding-right: 5px;
+                align-self: center;
+            }
+
+            .Sdefcontainer2 {
+                display: flex;
+                background-color:  rgb(119, 255, 119);
+                width: 90%;
+                height: 25px;
+                margin: 0px;
+                border: 1px solid black;
+            }
+
+            .SdefBar {
+                background-color: green;
+                width: 0%;
+                animation-name: BarFillerSdef;
+                animation-duration: 2500ms;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+                animation-delay: 3000ms;
+            }
+
+            @keyframes BarFillerSdef {
+                from {width: 0%;}
+                5% {width: 5%;}
+                10% {width: 8%;}
+                20% {width: 10%;}
+                30% {width: 12%;}
+                40% {width: 15%;}
+                50% {width: 20%;}
+                60% {width: 25%;}
+                70% {width: 30%;}
+                80% {width: 35%;}
+                90% {width: 40%;}
+                95% {width: 45%;}
+                to {width: 50%;}
+            }
+
+
+
+            /* stats Speed */
+            .statsContainerSped{
+                display: flex;
+            }
+
+            .Spedcontainer {
+                display: flex;
+                justify-content: space-between;
+                width: 80px;
+                height: 25px;
+                right: 400px;
+                margin: 0px 3px 0px 0px;
+                background-color: rgb(241, 135, 241);
+                border: 1px solid black;
+            }
+
+            .SpedName {
+                margin: 0px;
+                align-self: center;
+            }
+
+            .SpedNumber {
+                margin: 0px;
+                padding-right: 5px;
+                align-self: center;
+            }
+
+            .Spedcontainer2 {
+                display: flex;
+                background-color:  rgb(241, 135, 241);
+                width: 90%;
+                height: 25px;
+                margin: 0px;
+                border: 1px solid black;
+               
+            }
+
+            .SpedBar {
+                background-color: purple;
+                width: 0%;
+                animation-name: BarFillerSped;
+                animation-duration: 2500ms;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+                animation-delay: 3000ms;
+            }
+
+            
+            @keyframes BarFillerSped {
+                from {width: 0%;}
+                5% {width: 5%;}
+                10% {width: 10%;}
+                20% {width: 15%;}
+                30% {width: 20%;}
+                40% {width: 25%;}
+                50% {width: 30%;}
+                60% {width: 35%;}
+                70% {width: 40%;}
+                80% {width: 45%;}
+                90% {width: 50%;}
+                95% {width: 60%;}
+                to {width: 65%;}
+            }
+            
+            /* Evolution Section */
+
+            .bgEvolution {
+                background-image: url("assets/img/bgEvo.jpg");
+                margin: 50px 140px 0px 140px;
+                padding: 20px 15px 40px 15px;
+               
+            }
+
+            .EvolutionCharmander {
+                border: 2px solid white;
+                border-radius: 50%;
+                margin: 0px;
+                width: 120px;
+                position: relative;
+                left: 40px;
+            }
+
+            h3 {
+                text-align: center;
+            }
+
+            .Charpic {
+                position: relative;
+                width: 120px;
+                left: 7px;
+            }
+
+
+            .EvolutionFlex {
+                display: flex;
+            }
+
+
+            .LevelUps {
+                height: 40px;
+                margin: 0;
+                padding: 0;
+                left: 35px;
+                color: white;
+           
+            }
+
+
+
+            .arrow {
+                width: 35px;
+                height: 138px;
+                display: flex;
+                flex-direction: column;
+                right: 25px;
+            }
+
+
+            .arrow a {
+                color: white;
+                align-self: center;
+                font-size: 50px;
+                animation-name: loadingArrow;
+                animation-duration: 1200ms;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes loadingArrow {
+                from {opacity: -1;}
+                25% {opacity: .15;}
+                50% {opacity: .35;}
+                75% {opacity: .60;}
+                to {opacity: 1;}
+
+            }
+
+            .FireAttr {
+                position: relative;
+                width: 85px;
+                height: 30px;
+                background-color: red;
+                border-radius: 50px;
+                left: 55px;
+                bottom: 13px;
+                margin: 0;
+                padding: 0;
+            }
+
+            .Fire {
+                text-align: center;
+                color: white;
+                position: relative;
+                top: 7px;
+            }
+
+            .FlyingAttr {
+                position: relative;
+                width: 85px;
+                height: 30px;
+                background-color: rgb(168,144,240);
+                border-radius: 50px;
+                left: 55px;
+                bottom: 13px;
+                margin: 0;
+                padding: 0;
+            }
+         
+            .Flying {
+                text-align: center;
+                color: white;
+                position: relative;
+                top: 7px;
+            }
+
+            /* Gallery section */
+            .GalleryFlex{
+                display: flex;
+                padding: 0px 0px 0px 0px;
+                margin: 40px 20px 40px 55px;
+                width: 900px;
+                height: 500px;
+                background-color: black;
+            }
+
+            .GalleryLeft {
+                width: 60px;
+            }
+            
+            .GalleryLeftArrow {
+                position: relative;
+                color: white;
+                font-size: 40px;
+                top: 220px;
+                left: 50px;
+                transition: font-size 500ms;
+            }
+
+            .GalleryLeftArrow:hover {
+                font-size: 50px;
+            }
+
+            .Gallery {
+                position: relative;
+                max-height: 340px;
+                max-width: 330px;
+                width: 330px;
+                height: 340px;
+                padding: 30px 30px 0px 60px;
+                background-color: red;
+                left: 185px;
+                top: 75px;
+            }
+
+            .GalleryRight {
+                width: 60px;
+            }
+
+            .GalleryRightArrow {
+                position: relative;
+                color: white;
+                font-size: 40px;
+                top: 220px;
+                left: 341px;
+                transition: font-size 500ms;
+            }
+
+            .GalleryRightArrow:hover {
+                font-size: 50px;
+            }
+        </style>
+
+    </head>
+    <body id="bodyClick">
+
+        <!-- Nav -->
+        <div class="NavBar">
+            <ul>
+                <li><a href ="#">Home</a></li>
+                <li><a href ="#">Game</a></li>
+                <li><a href ="#">Survey</a></li>
+                <li><a href ="#">Contact</a></li>
+                <li><a href ="#" id="Pokes" class="Poke">PokePages</a></li>
+                    <div class="NavBarSub" id="NavBarSubs">
+                        <a href ="#">Charmander</a>
+                        <a href ="#">Charmeleon</a>
+                        <a href ="#">Charizard</a>
+                    </div>
+            </ul>
+        </div>
+        
+
+
+
+
+        <!-- heroBox -->
+        <div class="Box" id="Boxes">
+            <h2 class="pokemon">Charmander</h2>
+            <div class="Hero">
+                <div class="Char">
+                    <img src="assets/img/Char0.jpg" alt="" class="CharmanderPicture">
+                </div>
+                <div class="sum">
+                    <h2>Biology</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptatem atque laudantium nihil reprehenderit, laborum ipsum corporis modi quisquam aspernatur illo distinctio eos quod quaerat culpa eum sequi deleniti rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et fugit neque molestias. Odit dicta fugit minima inventore alias beatae doloribus. Reprehenderit, minima! At aliquid cum atque odit veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ad voluptas ipsa non vitae perferendis quisquam, tempore aut dolores! Omnis dolor provident enim saepe labore, quam cumque autem optio quia.</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Stats -->
+            <div class="statContainer">
+                <h2>Stats</h2>
+                <div class="statsContainerHP">
+                    <div class="hpcontainer">
+                        <h4 class="hpName">Hp:</h4>
+                        <h4 class="hpNumber">39</h4>
+                    </div>
+                    <div class="hpcontainer2">
+                        <div class="hpBar"></div>
+                    </div>
+                 </div>
+                 <div class="statsContainerATT">
+                    <div class="ATTcontainer">
+                        <h4 class="ATTName">Att:</h4>
+                        <h4 class="ATTNumber">52</h4>
+                    </div>
+                    <div class="ATTcontainer2">
+                        <div class="ATTBar"></div>
+                    </div>
+                 </div>
+                 <div class="statsContainerDef">
+                    <div class="Defcontainer">
+                        <h4 class="DefName">Def:</h4>
+                        <h4 class="DefNumber">43</h4>
+                    </div>
+                    <div class="Defcontainer2">
+                        <div class="DefBar"></div>
+                    </div>
+                 </div>
+                 <div class="statsContainerSatt">
+                    <div class="Sattcontainer">
+                        <h4 class="SattName">Sp.Att:</h4>
+                        <h4 class="SattNumber">60</h4>
+                    </div>
+                    <div class="Sattcontainer2">
+                        <div class="SattBar"></div>
+                    </div>
+                 </div>
+                 <div class="statsContainerSdef">
+                    <div class="Sdefcontainer">
+                        <h4 class="SdefName">Sp.Def:</h4>
+                        <h4 class="SdefNumber">50</h4>
+                    </div>
+                    <div class="Sdefcontainer2">
+                        <div class="SdefBar"></div>
+                    </div>
+                 </div>
+                 <div class="statsContainerSped">
+                    <div class="Spedcontainer">
+                        <h4 class="SpedName">Speed:</h4>
+                        <h4 class="SpedNumber">65</h4>
+                    </div>
+                    <div class="Spedcontainer2">
+                        <div class="SpedBar"></div>
+                    </div>
+                 </div>
+            </div>
+
+
+            <!-- evolutions -->
+            <div>
+                <Div class="bgEvolution">
+                    <h2 style="color: white;">Evolutions</h2>
+                    <Div class="EvolutionFlex">
+                        <div class="b29">
+                            <div class="EvolutionCharmander">
+                                <img src="assets/img/CharEvolution.jpg" alt="" class="Charpic">
+                            </div>
+                            <h3 style="color: white;">Charmander</h3>
+                            <div class="FireAttr">
+                            <p class="Fire">Fire</p>
+                            </div>
+                        </div>
+                        <div class="arrow">
+                            <p class="LevelUps">Level 16</p>
+                            <a href ="#"><i class="fas fa-arrow-right"></i></i></a>
+                        </div>
+                        <div class="b29">
+                            <div class="EvolutionCharmander">
+                                <img src="assets/img/CharmEvolution.jpg" alt="" class="Charpic">
+                            </div>
+                            <h3 style="color: white;">Charmeleon</h3>
+                            <div class="FireAttr">
+                                <p class="Fire">Fire</p>
+                            </div>
+                        </div>
+                        <div class="arrow">
+                            <p class="LevelUps">Level 36</p>
+                            <a href ="#"><i class="fas fa-arrow-right"></i></i></a>
+                        </div>
+                        <div class="b29">
+                            <div class="EvolutionCharmander">
+                                <img src="assets/img/CharzEvolution.jpg" alt="" class="Charpic">
+                            </div>
+                            <h3 style="color: white;">Charizard</h3>
+                            <div class="FireAttr">
+                                <p class="Fire">Fire</p>
+                            </div>
+                            <div class="FlyingAttr">
+                                <p class="Flying">Flying</p>
+                            </div>
+                        </div>
+                    </Div>
+                </Div>
+            </div>
+
+
+            <!-- Gallery Carousel -->
+<!-- 
+            <div class="GalleryFlex">
+                <Div class="GalleryLeft">
+                    <a href ="#"><i class="fas fa-arrow-left GalleryLeftArrow"></i></i></a>
+                </Div>
+                <div class="Gallery" id="Galleryy">
+                    <img src="assets/img/Char1.jpg" alt="">
+                </div>
+                <Div class="GalleryRight" onclick="galleryRoll()">
+                    <a href ="#"><i class="fas fa-arrow-right GalleryRightArrow"></i></i></a>
+                </Div>
+            </div> -->
+
+            <hr>
+            <!-- Footer -->
+
+            <div class="FooterFlex">
+                <div class="FooterContainer">
+                    <p class="copyright">@2022 Johnny.</p>
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <script>
+
+            // DropDownMenu
+            document.getElementById('Pokes').onmouseover = function(){
+                if(NavBarSubs.style.display = "none"){
+                    NavBarSubs.style.display = "block";
+                    Pokes.style.boxShadow = "1px 1px 15px black";
+                };
+            };
+            document.getElementById('bodyClick').onclick = function(){
+                if(NavBarSubs.style.display = "block"){
+                    NavBarSubs.style.display = "none";
+                    Pokes.style.boxShadow = "";
+                };
+            };
+          
+            // // Gallery
+            // let charNumbers = [0, 1, 2, 3, 4]
+            // let galleryEl = document.querySelectorAll("#gallery Char")
+            // console.log(galleryEl)
+            // for (let i = 0; i <= charNumbers.length; i++){
+            //     function galleryRoll(){
+            //         galleryEl[i]
+
+            //     }
+            // }
+
+
+        
+
+
+
+
+        </script>
+    </body>
+</html>
